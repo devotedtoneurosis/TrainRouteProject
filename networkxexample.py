@@ -1,5 +1,6 @@
 import networkx as nx
 
+#iterate through a trip string and map the weight of the total trip
 def get_weight_of_trip(graph,trip):
     weight = 0
     counter = 0
@@ -115,6 +116,7 @@ def main():
     graph = nx.MultiDiGraph()
     mapDefinition = "AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7"
 
+    #build map from mapDefinition string
     mapElements = mapDefinition.split(", ")
     for el in mapElements:
         graph.add_weighted_edges_from([(el[0], el[1], int(el[2]))])

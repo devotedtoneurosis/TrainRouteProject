@@ -153,7 +153,9 @@ def calculate_multi_step_distance(steps,allowStops):
     
     
 #build graph from passed map parameters. Parameter is passed as a string by the user. String sanitization/input error
-#handling is out of scope of this specification, however, it would be good to add in a future release
+#handling is out of scope of this specification, however, it would be good to add in a future release. To prevent 
+#add-by-value rather than add-by-reference issues, the dictionary is directly referenced whenever possible rather
+#than a local variable cache
 def build_graph(map):
     
     mapElements = map.split(", ")
